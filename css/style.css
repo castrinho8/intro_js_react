@@ -81,11 +81,11 @@
 .reveal .primary-red p,
 .reveal .primary-red ol,
 .reveal .primary-red ul {
-  color: crimson;
+  color: grey;
 }
 
 .reveal .primary-red span {
-  color: grey;
+  color: crimson;
 }
 
 .reveal .secondary-red h1,
