@@ -149,3 +149,7 @@
 .reveal .progress span {
   background: white;
 }
+
+.reveal section img {
+  box-shadow: none;
+}
