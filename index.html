@@ -85,7 +85,7 @@
 				<section data-background="seagreen" class="secondary-green">
 					<h3>Single Page Applications</h3>
 					<p><span>Javascript para gobernarlos a todos</span></p>
-					<small><a href=·"https://web.telegram.org/#/im">Ejemplo: Telegram</a></small>
+					<small><a href="https://web.telegram.org/#/im">Ejemplo: Telegram</a></small>
 				</section>
 
 				<section data-background="img/diagrams/rest_architecture.svg" data-background-size="80%" class="secondary-green">
@@ -187,7 +187,7 @@ const double = (x) => 2 * x;
 // ES5
 var dancer = {
   name: 'Disco Stu',
-  saySomething() {
+  saySomething: function() {
     return function(baby) {
       return this.name + ' llega antes que tu, ' + baby + '!';
     }
@@ -205,7 +205,7 @@ talk('nena'); // ' llega antes que tu, nena!'
 // ES5
 var dancer = {
   name: 'Disco Stu',
-  saySomething() {
+  saySomething: function() {
     return function(baby) {
       return this.name + ' llega antes que tu, ' + baby + '!';
     }.bind(this); // Seteamos el valor de 'this'
@@ -223,7 +223,7 @@ talk('nena'); // 'Disco Stu llega antes que tu, nena!'
 // ES5
 var dancer = {
   name: 'Disco Stu',
-  saySomething() {
+  saySomething: function() {
     return (baby) => this.name + ' llega antes que tu, ' + baby + '!';
   }
 }
@@ -256,7 +256,7 @@ const result = isBurnsEvil ? 'Yes, he stole the sun' : 'No, he is worst';
 					<h4>Switches</h4>
 					<pre><code class="javascript" data-trim data-noescape>
 
-const person = 'Apu';
+const apu = 'Apu';
 
 const getWife (person) => {
   switch (person) {
@@ -269,7 +269,7 @@ const getWife (person) => {
   }
 }
 
-getWife(person) // 'Manjula'
+getWife(apu) // 'Manjula'
 
 					</code></pre>
 				</section>
@@ -424,6 +424,13 @@ console.log(CREATOR) // 'Matt Groening'
 				<section class="primary-green">
 					<h4>Show me the code!</h4>
 					<img src="img/gif/homer_corn_burn.gif" width="40%"/>
+				</section>
+
+				<section data-background="seagreen" class="secondary-green">
+					<h4><em>Componentes</em> reutilizables y anidables</h4>
+					<h4>Tienen <em>estado</em>...</h4>
+					<h4>Y se pasan datos en las <em>props</em></h4>
+					<h4>Cada componente tiene su <em>ciclo de vida</em></h4>
 				</section>
 
 				<section data-background="#a0cff1">
