@@ -182,7 +182,27 @@ const double = (x) => 2 * x;
 				</section>
 
 				<section data-background="seagreen">
-					<h4>ES5 - Functions</h4>
+					<h4>Functions</h4>
+					<pre><code class="javascript" data-trim data-noescape>
+// ES6 - Default value, Rest params
+const calculation = (x = 1, ...others) => {
+  const y = (2 * x) + others.lenght;
+  return y;
+}
+
+// ES6 Spread array
+const params = [ "Homer", true, 7 ]
+const other = [ 1, 2, ...params ] // [ 1, 2, "Homer", true, 7 ]
+
+// ES6 Spread object
+const params = { name: "Homer", lastName: "Simpson" }
+const other = { ...params, age: 54 }
+// { name: "Homer", lastName: "Simpson", age: 54 }
+					</code></pre>
+				</section>
+
+				<section data-background="seagreen">
+					<h4>ES5 - Functions context</h4>
 					<pre><code class="javascript" data-trim data-noescape>
 // ES5
 var dancer = {
@@ -200,7 +220,7 @@ talk('nena'); // ' llega antes que tu, nena!'
 				</section>
 
 				<section data-background="seagreen">
-					<h4>ES5 - Functions (bind)</h4>
+					<h4>ES5 - Functions context (bind)</h4>
 					<pre><code class="javascript" data-trim data-noescape>
 // ES5
 var dancer = {
@@ -282,7 +302,7 @@ getWife(apu) // 'Manjula'
 						</a>
 					</p>
 					<p>
-						Para recorrer arrays, normalmente se usan funciones propias de los arrays como map, forEach...
+						Para recorrer arrays, normalmente se usan funciones propias de los arrays como map, forEach... o <a href="lodash.com/docs/">lodash</a>
 					</p>
 					<p>
 						<a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array">
@@ -307,7 +327,6 @@ name = `${name} Nahasapeemapetilon`;
 				<section data-background="seagreen">
 					<h4>Destructing</h4>
 					<pre><code class="javascript" data-trim data-noescape>
-
 const user = {
   name: 'Ned Flanders',
   age: 42,
@@ -319,6 +338,26 @@ const age = user.age;
 
 // Forma chachi
 const { name, age } = user;
+					</code></pre>
+				</section>
+
+				<section data-background="seagreen">
+					<h4>Property Shorthand</h4>
+					<pre><code class="javascript" data-trim data-noescape>
+const name = 'Ned Flanders';
+const age = 42;
+
+// ES5
+const newUser = {
+  name: name,
+  age: age,
+}
+
+// ES6
+const newUser = {
+  name,
+  age,
+}
 					</code></pre>
 				</section>
 
